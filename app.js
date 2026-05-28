@@ -4,6 +4,7 @@ import pool from './db.js';
 
 const app = express();
 dotenv.config();
+const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 
@@ -55,4 +56,4 @@ app.get('/api/user/:username', async (req, res) => {
 });
 
 
-app.listen(5000, () => { console.log('Listening on port : 5000')} );
+app.listen(PORT, () => { console.log('Listening on port : 5000')} );
